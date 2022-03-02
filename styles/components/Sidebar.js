@@ -1,14 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Avatar } from '@mui/material';
-import turtle from '../../pages/Images/turtle.jpg';
+
+
+
+
 
 
 const Sidebar = () => {
     return (
         <Container>
             <Header>
-               <UserAvatar src= {turtle} />
+               <UserAvatar src="/turtle.jpg" alt="turtle" />
+               <IconsGroup>
+                <img
+                    src="/print.jpg" 
+                    alt="print"
+                    width="100"
+                    borderRadius="50%"
+                     />
+
+               </IconsGroup>
+                   
+               
             </Header>
 
         </Container>
@@ -43,3 +57,5 @@ const UserAvatar = styled(Avatar)`
         opacity:0.8;
     }
 `;
+
+const IconsGroup = styled.div``
