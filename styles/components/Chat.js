@@ -1,13 +1,16 @@
 import React from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
-import { grid } from '@mui/system';
-import { resolvePath } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 
 const Chat = ({photoURL, name, timestamp, latestMessage }) => {
+    const router =useRouter()
+    const enterChat = () => { 
+        router.push('/chat/123')
+    }
   return (
-    <Container> 
+    <Container onClick={enterChat}> 
     <FrdAvatar src={photoURL} />
     <ChatContainer>
     <div style={{ gridArea: 'name'}}>{name}</div>

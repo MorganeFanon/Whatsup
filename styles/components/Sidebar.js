@@ -64,7 +64,7 @@ const Sidebar = () => {
                     <SearchInput />
                 </SearchBar>
             </SearchChat>
-            {Chat.map(chat => (<Chat 
+            {chat.map(chat => (<Chat 
             latestMessage ={chat.latestMessage}
             name={chat.name}
             timestamp={chat.timestamp}
@@ -108,7 +108,7 @@ const SearchChat = styled.div`
 background-color: #bd3e3ec5;
 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 padding: 20px;
-`
+`;
 
 const SearchBar = styled.div`
     display: flex;

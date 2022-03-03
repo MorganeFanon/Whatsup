@@ -1,13 +1,23 @@
-import React from 'react'
+import React from 'react';
+import styled from 'styled-components';
+
 
 const ChatBox = () => {
   return (
-    <div>
-lveovkoevkoe
+    <Container>
 
-    </div>
+ddd
+
+    </Container>
+
   )
 }
-    const ChatBox: () => JSX.Element
 
 export default ChatBox
+
+const Container = styled.div`
+
+display: flex;
+background-color: #f8fafc;
+width: 100%;
+`;
