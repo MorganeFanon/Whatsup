@@ -5,7 +5,9 @@ import ReactRoundedImage from 'react-rounded-image';
 import ChatIcon from '@mui/icons-material/Chat';
 import CustomVerticalMore from './CustomVerticalMore';
 import HistoryIcon from '@mui/icons-material/History';
-
+import SearchIcon from '@mui/icons-material/Search';
+import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 
@@ -31,7 +33,7 @@ const Sidebar = () => {
                           hoverColor="#DD1144"
                           />  */}
                     </IconButton>
-
+ 
                     <IconButton>
                         <ChatIcon />
                     </IconButton>
@@ -39,13 +41,27 @@ const Sidebar = () => {
                     <IconButton>
                         <CustomVerticalMore />
                     </IconButton>
-
-
-
                </IconsGroup>
-                   
-               
             </Header>
+            <Notification>
+                <NotificationAvatar>
+                    <CircleNotificationsIcon  style={{ color: '#9DE1FE'}} /> 
+                </NotificationAvatar>
+                <NotificationText>
+                    <div >Get Notified of New Messages</div>
+                    <div style={{ display:'flex' }}>
+
+                    </div>
+                    <a href="#"><u>Turn on desktop Notifications</u></a>
+                    <IconButton><ArrowForwardIcon /></IconButton>      
+                </NotificationText>
+            </Notification>
+            <SearchChat>
+                <SearchBar>
+                    <SearchIcon />
+                    <SearchInput />
+                </SearchBar>
+            </SearchChat>
 
         </Container>
     )
@@ -81,3 +97,37 @@ const UserAvatar = styled(Avatar)`
 `;
 
 const IconsGroup = styled.div``
+const SearchChat = styled.div`
+background-color: #ee82ee;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+padding: 20px;
+`
+
+const SearchBar = styled.div`
+    display: flex;
+    padding: 5px;
+    border-radius: 10px;
+    border-bottom: 1px solid #ededed;
+    background: white;
+    `;
+
+    const SearchInput = styled.input `
+    width: 100%;
+    border: none;
+    `;
+
+    const Notification = styled.div`
+    display: flex;
+    justify-content: sapce-around;
+          align-items: center;
+          padding: 10px;
+          background-color: #9DE1FE;
+    `
+    const NotificationAvatar = styled(Avatar)`
+        background-color: white;
+    ` 
+
+    const NotificationText = styled.div`
+         display: flex;
+         flex-direction: column;
+    ` 
