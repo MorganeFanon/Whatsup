@@ -6,8 +6,8 @@ import ChatIcon from '@mui/icons-material/Chat';
 import CustomVerticalMore from './CustomVerticalMore';
 import HistoryIcon from '@mui/icons-material/History';
 import SearchIcon from '@mui/icons-material/Search';
-import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
+import NotificationsOffRoundedIcon from '@mui/icons-material/NotificationsOffRounded';
 
 
 
@@ -45,7 +45,7 @@ const Sidebar = () => {
             </Header>
             <Notification>
                 <NotificationAvatar>
-                    <CircleNotificationsIcon  style={{ color: '#9DE1FE'}} /> 
+                    <NotificationsOffRoundedIcon  style={{ color: '#9DE1FE'}} /> 
                 </NotificationAvatar>
                 <NotificationText>
                     <div >Get Notified of New Messages</div>
@@ -53,7 +53,7 @@ const Sidebar = () => {
 
                     </div>
                     <a href="#"><u>Turn on desktop Notifications</u></a>
-                    <IconButton><ArrowForwardIcon /></IconButton>      
+                    <IconButton><ArrowForwardIosRoundedIcon style={{width: 15, height: 15}} /></IconButton>      
                 </NotificationText>
             </Notification>
             <SearchChat>
@@ -98,7 +98,7 @@ const UserAvatar = styled(Avatar)`
 
 const IconsGroup = styled.div``
 const SearchChat = styled.div`
-background-color: #ee82ee;
+background-color: #bd3e3ec5;
 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 padding: 20px;
 `
@@ -121,7 +121,7 @@ const SearchBar = styled.div`
     justify-content: sapce-around;
           align-items: center;
           padding: 10px;
-          background-color: #9DE1FE;
+          background-color: #381313a9;
     `
     const NotificationAvatar = styled(Avatar)`
         background-color: white;
