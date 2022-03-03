@@ -64,7 +64,7 @@ const Sidebar = () => {
                     <SearchInput />
                 </SearchBar>
             </SearchChat>
-            {chat.map(chat => (<Chat 
+            {chats.map(chat => (<Chat
             latestMessage ={chat.latestMessage}
             name={chat.name}
             timestamp={chat.timestamp}

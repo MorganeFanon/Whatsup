@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import ChatContent from '../../styles/components/ChatContent.js'
 
 
 const ChatBox = () => {
   return (
     <Container>
 
-ddd
+    <ChatContent />
 
     </Container>
 

@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-
+import { Avatar } from '@mui/material';
 
 const Chat = ({photoURL, name, timestamp, latestMessage }) => {
     const router =useRouter()
