@@ -1,6 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Avatar } from '@mui/material';
+import { Avatar, IconButton } from '@mui/material';
+import ReactRoundedImage from 'react-rounded-image';
+import ChatIcon from '@mui/icons-material/Chat';
+import CustomVerticalMore from './CustomVerticalMore';
+import HistoryIcon from '@mui/icons-material/History';
+
 
 
 
@@ -11,14 +16,31 @@ const Sidebar = () => {
     return (
         <Container>
             <Header>
-               <UserAvatar src="/turtle.jpg" alt="turtle" />
+               <UserAvatar 
+                        src="/turtle.jpg" 
+                        alt="turtle" 
+                        />
                <IconsGroup>
-                <img
-                    src="/print.jpg" 
-                    alt="print"
-                    width="100"
-                    borderRadius="50%"
-                     />
+                   <IconButton>
+                   <HistoryIcon />
+                         {/* <ReactRoundedImage 
+                          image="/print.jpg" 
+                          imageWidth="80"
+                          imageHeight="80"
+                          roundedSize="9"
+                          hoverColor="#DD1144"
+                          />  */}
+                    </IconButton>
+
+                    <IconButton>
+                        <ChatIcon />
+                    </IconButton>
+
+                    <IconButton>
+                        <CustomVerticalMore />
+                    </IconButton>
+
+
 
                </IconsGroup>
                    
