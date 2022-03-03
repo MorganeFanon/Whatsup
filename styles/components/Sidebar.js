@@ -8,6 +8,8 @@ import HistoryIcon from '@mui/icons-material/History';
 import SearchIcon from '@mui/icons-material/Search';
 import ArrowForwardIosRoundedIcon from '@mui/icons-material/ArrowForwardIosRounded';
 import NotificationsOffRoundedIcon from '@mui/icons-material/NotificationsOffRounded';
+import chats from '../data/chats.json';
+import Chat from './Chat.js';
 
 
 
@@ -48,8 +50,8 @@ const Sidebar = () => {
                     <NotificationsOffRoundedIcon  style={{ color: '#9DE1FE'}} /> 
                 </NotificationAvatar>
                 <NotificationText>
-                    <div >Get Notified of New Messages</div>
-                    <div style={{ display:'flex' }}>
+                    <div>Get Notified of New Messages</div>
+                    <div style={{ display:'flex', alignItems: 'center' }}>
 
                     </div>
                     <a href="#"><u>Turn on desktop Notifications</u></a>
@@ -62,7 +64,12 @@ const Sidebar = () => {
                     <SearchInput />
                 </SearchBar>
             </SearchChat>
-
+            {Chat.map(chat => (<Chat 
+            latestMessage ={chat.latestMessage}
+            name={chat.name}
+            timestamp={chat.timestamp}
+            photoURL={chat.photoURL}
+            />))}
         </Container>
     )
 }

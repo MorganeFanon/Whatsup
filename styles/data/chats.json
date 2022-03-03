@@ -1,0 +1,16 @@
+[
+    {
+        "timestamp": {
+            "seconds": 1633358405,
+            "nanoseconds": 777000000
+        },
+        "users": [
+        "emma@gmail.com",
+        "morganefanon1@gmail.com"
+        ],
+        "photoURL": "https://i.imgur.com/nLAeMTG.jpeg",
+        "name": "Foxy",
+        "latestMessage": "hey dude, how atre you ?"
+
+    }
+]
