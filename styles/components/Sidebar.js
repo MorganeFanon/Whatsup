@@ -12,10 +12,6 @@ import chats from '../data/chats.json';
 import Chat from './Chat.js';
 
 
-
-
-
-
 const Sidebar = () => {
     return (
         <Container>

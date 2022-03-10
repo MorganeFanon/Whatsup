@@ -21,7 +21,7 @@ const Chat = ({photoURL, name, timestamp, latestMessage }) => {
     
     
   )
-}
+} 
 
 export default Chat
 

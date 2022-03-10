@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Sidebar from './Sidebar';
 
-const Layout = ({ children }) => {
+const Layout = ({ children  }) => {
   return (
     <Wrapper>
       <Container>
@@ -36,7 +36,7 @@ const Container = styled.div`
     box-shadow: 0 0 1rem 0.05rem rgba(0, 0, 0, 0.2);
     height: 100vh;   
     
-    @media (max-width: 640px) {
+    @media (max-width: 1000px) {
         width:100%;
         height:100vh;
         margin: 0;

@@ -7,8 +7,10 @@ import { IconButton } from '@mui/material';
 import InsertEmoticonIcon from '@mui/icons-material/InsertEmoticon';
 import AttachFileIcon from '@mui/icons-material/AttachFile'
 import MicIcon from '@mui/icons-material/Mic';
+import messages from '../data/messages.json';
+import Message  from './Message';
 
-function ChatContent() {
+const ChatContent = () => {
   return (
     <Container>
         <Header>
@@ -25,7 +27,12 @@ function ChatContent() {
            </IconButton>
         </Header>
         <MessagesContainer>
-
+            {messages.map(message => <Message 
+                key={message.id} 
+                user={message.user}
+                message={message.message}
+                timestamp={message.timestamp}
+            />)}
         </MessagesContainer>    
         <InputContainer>
         <IconButton>
@@ -101,3 +108,7 @@ const Header = styled.div`
         padding: 20px;
         background-color: #e5ded8;
         flex: 1;
+        background-image: url('/bg-chat.png');
+        background-attachment: fixed;
+        background-repeat: repeat;
+    `; 
