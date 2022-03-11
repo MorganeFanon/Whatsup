@@ -1,13 +1,18 @@
 import '../styles/globals.css';
-import Layout from '../styles/components/Layout'
+import Layout from '../styles/components/Layout';
+import Loading from '../styles/components/Loading';
+import { AuthProvider } from '../Auth';
 
 function MyApp({ Component, pageProps }) {
-  return (<Layout>
-
- 
+  
+  return (
+  <AuthProvider>
+  <Layout>
   <Component {...pageProps} />
 
-  </Layout>)
+  </Layout>
+  </AuthProvider>  
+  )
 }
 
 export default MyApp
