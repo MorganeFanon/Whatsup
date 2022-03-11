@@ -3,7 +3,8 @@ import styled from "styled-components";
 import Image from'next/image';
 import GoogleIcon from '@mui/icons-material/Google';
 import { Button } from '@mui/material';
-import {auth, provider} from '../firebase';
+import {auth, provider } from '../firebase';
+import { signInWithPopup } from '@firebase/auth';
 
 const login = () => {
   const loginWithGoogle = () => {

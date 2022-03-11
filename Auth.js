@@ -1,13 +1,13 @@
 import { useEffect, useContext, createContext, useState } from 'react';
-import { auth } from './firebase';
+import { auth, db } from './firebase';
 import Login from './pages/login';
 import Loading from './styles/components/Loading';
+import { doc, serverTimestamp, setDoc } from '@firebase/firestore';
 
 const AuthContext = createContext({});
-
 export const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(null)
-   const [loading, setLoading] = useState(true)
+    const [loading, setLoading] = useState(true)
     useEffect(() => {
         return auth.onIdTokenChanged(async (user) => {
             if (!user) {
@@ -17,6 +17,13 @@ export const AuthProvider = ({ children }) => {
                 return;
             }
             const token = await user.getIdToken()
+            const userData = {
+                displayName: user.displayName,
+                email: user.email,
+                lastSeen: serverTimestamp(),
+                photoURL: user.photoURL
+            }
+            await setDoc(doc(db, "users", user.uid), userData)
             console.log('user token', token);
             setCurrentUser(user);
             setLoading(false);
